@@ -96,14 +96,33 @@ def add_user():
 
         print("User Added Successfully!\n")
 
+def view_books():
+    if not books:
+        print("No Books Available.")
+        return
 
+    print("\n Book List ")
+    for book in books.values():
+        book.display_info()
+
+
+def view_users():
+    if not users:
+        print("No Users Available.")
+        return
+
+    print("\n User List ")
+    for user in users.values():
+        user.display_info()
 
 # Library    
 while True:
     print("\n Library Menu ")
     print("1. Add Book")
     print("2. Add User")
-    print("3. Exit")
+    print("3. View Books")
+    print("4. View Users")
+    print("5. Exit")
 
     choice = input("Enter choice: ")
 
@@ -112,6 +131,10 @@ while True:
     elif choice == "2":
         add_user()
     elif choice == "3":
+        view_books()
+    elif choice == "4":
+        view_users()
+    elif choice == "5":
         print("Exiting System...")
         break
     else:
