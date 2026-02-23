@@ -34,7 +34,7 @@ class User:
         self.mobile = mobile
         self.is_admin = is_admin
 
-# HISTROY TABLE
+# HISTORY TABLE
 class History:
     def __init__(self, user_id, book_name, issue_date, return_date):
         self.user_id = user_id
@@ -49,4 +49,20 @@ class Admin(User):
 
    
 
-        
+# Input for Tables
+
+books = {}
+
+for i in range(5):
+    book_id = input("Enter Book ID: ")
+    book_name = input("Enter Book Name: ")
+    author_name = input("Enter Author Name: ")
+
+    books[book_id]={
+        "book_name" : book_name,
+        "author_name" : author_name
+    }
+
+print("\nBooks Data:")
+print(books)
+
