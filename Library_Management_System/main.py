@@ -1,16 +1,18 @@
 # Library Management System
 
 # BOOKS
-class Books:
+class Book:
     def __init__(self, book_id, book_name, author_name):
         self.book_id = book_id
         self.book_name = book_name
         self.author_name = author_name
+    def display_info(self):
+        print(self.book_id, self.book_name, self.author_name)    
 
 # BOOK UNITS
 class BookUnit:
-    def __init__(self, book_name, total_unit, available_unit):
-        self.book_name = book_name
+    def __init__(self, book, total_unit, available_unit):
+        self.book = book
         self.total_unit = total_unit
         self.available_unit = available_unit
 
@@ -39,7 +41,12 @@ class History:
         self.book_name = book_name
         self.issue_date = issue_date
         self.return_date = return_date
-        
 
+# ADMIN 
+class Admin(User):
+    def __init__(self, user_id, name, year, email, mobile):
+        super().__init__(user_id, name, year, email, mobile, True)
+
+   
 
         
