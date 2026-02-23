@@ -31,3 +31,15 @@ class User:
         self.email = email
         self.mobile = mobile
         self.is_admin = is_admin
+
+# HISTROY TABLE
+class History:
+    def __init__(self, user_id, book_name, issue_date, return_date):
+        self.user_id = user_id
+        self.book_name = book_name
+        self.issue_date = issue_date
+        self.return_date = return_date
+        
+
+
+        
