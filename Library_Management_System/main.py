@@ -22,3 +22,12 @@ class IssueRecord:
         self.issue_date = issue_date
         self.return_date = return_date
 
+# USER INFO
+class User:
+    def __init__(self, user_id, name, year, email, mobile, is_admin):
+        self.user_id = user_id
+        self.name = name
+        self.year = year
+        self.email = email
+        self.mobile = mobile
+        self.is_admin = is_admin
