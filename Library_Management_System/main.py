@@ -50,7 +50,7 @@ class Admin(User):
    
 
 # Input for Tables
-
+# books info input
 books = {}
 
 for i in range(5):
@@ -66,3 +66,42 @@ for i in range(5):
 print("\nBooks Data:")
 print(books)
 
+#  user info input
+users = {}
+
+for _ in range(5):
+    user_id = input("Enter User ID: ")
+    name = input("Enter Name: ")
+    year = input("Enter Year: ")
+    email = input("Enter Email: ")
+    mobile = input("Enter Mobile: ")
+    is_admin = input("Is Admin (True/False): ")
+
+    users[user_id] = {
+        "name": name,
+        "year": year,
+        "email": email,
+        "mobile": mobile,
+        "is_admin": is_admin
+    }
+
+print("\nUsers Data:")
+print(users)
+
+# History info
+history = {}
+
+for _ in range(5):
+    user_id = input("Enter User ID: ")
+    book_name = input("Enter Book Name: ")
+    issue_date = input("Enter Issue Date: ")
+    return_date = input("Enter Return Date: ")
+
+    history[user_id] = {
+        "book_name": book_name,
+        "issue_date": issue_date,
+        "return_date": return_date
+    }
+
+print("\nHistory Data:")
+print(history)
