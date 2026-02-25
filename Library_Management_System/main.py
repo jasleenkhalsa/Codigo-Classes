@@ -115,6 +115,32 @@ def view_users():
     for user in users.values():
         user.display_info()
 
+def delete_book():
+    if not books:
+        print("No Books Available to Delete.")
+        return
+
+    book_id = input("Enter Book ID to delete: ")
+
+    if book_id in books:
+        del books[book_id]
+        print("Book Deleted Successfully!\n")
+    else:
+        print("Book ID Not Found.\n")
+
+def delete_user():
+    if not users:
+        print("No Users Available to Delete.")
+        return
+
+    user_id = input("Enter User ID to delete: ")
+
+    if user_id in users:
+        del users[user_id]
+        print("User Deleted Successfully!\n")
+    else:
+        print("User ID Not Found.\n")
+
 # Library    
 while True:
     print("\n Library Menu ")
