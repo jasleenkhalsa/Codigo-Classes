@@ -148,7 +148,9 @@ while True:
     print("2. Add User")
     print("3. View Books")
     print("4. View Users")
-    print("5. Exit")
+    print("5. Delete Books")
+    print("6. Delete Users")
+    print("7. Exit")
 
     choice = input("Enter choice: ")
 
@@ -161,6 +163,10 @@ while True:
     elif choice == "4":
         view_users()
     elif choice == "5":
+        delete_book()
+    elif choice == "6":
+        delete_user()        
+    elif choice == "7":
         print("Exiting System...")
         break
     else:
