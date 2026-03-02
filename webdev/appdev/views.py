@@ -1,14 +1,18 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse, redirect
+from appdev.models import TableOne
 
 def home(request):
-    if request.method == 'GET':
-        name = request.GET.get('var_name')
-        mobile = request.GET.get('mobile')
-        email = request.GET.get('email')
+    if request.method == 'POST':
+        name = request.POST.get('var_name')
+        mobile = request.POST.get('mobile')
+        email = request.POST.get('email')
         
-        print(f"Name: {name}, Mobile: {mobile}, Email: {email}")
-    return render(request, 'home.html')
+        TableOne.objects.create(name = name, mobile=mobile, email = email)
+        return redirect('/')
 
+     #   print(f"Name: {name}, Mobile: {mobile}, Email: {email}")
+    return render(request, 'home.html')
+    
 
 
 

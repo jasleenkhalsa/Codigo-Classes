@@ -9,7 +9,9 @@
     <h1> This is an HTML file </h1>
 
     <h1> User Input Form </h1>
-    <form method="get">
+    <form method="post">
+        {% csrf_token %}
+
         <!-- 3 things needed : name,mobile, email -->
     <label for="name">Name: </label>
     <input type="text" id="name" name="var_name"><br><br>
